@@ -1,0 +1,20 @@
+{
+  "name": "module1",
+  "version": "1.0.0",
+  "description": "First app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aaron",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-select": "^1.13.12",
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0"
+  },
+  "proxy": "http://localhost:3000"
+}
