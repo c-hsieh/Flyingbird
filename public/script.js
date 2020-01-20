@@ -1,7 +1,5 @@
-// require('bootstrap');
 
 let dep = {};
-// console.log('about to fetch a poem');
 async function getDep() {
     const res = await fetch('listdep.json');
     return await res.json();
@@ -37,10 +35,6 @@ getDep().then(async list => {
         document.getElementById("deptCode").appendChild(option);
     };
 })
-//$('#deptCode').selectpicker();
-// $(function () {
-//     $('#deptCode').selectpicker();
-// });
 $('.select2').select2();
 
 function getKeyByValue(object, value) {
@@ -166,26 +160,7 @@ button.addEventListener('click', async (event) => {
             "授權碼人數": "authorize_p",
             "現修": "restrict",
         };
-        // let headT = ["chn_name", "course_code"];
-        // let columns = [];
-        // for (h of headT) {
-        //     let t = {
-        //         title: h,
-        //         field: h,
-        //         sortable: true
-        //         }
-        //     columns.push(t);
-        // };
-        // function operateFormatter() {
-        //     return [
-        //         '<a class="like" href="javascript:void(0)" title="Like">',
-        //         '<i class="fa fa-heart"></i>',
-        //         '</a>  ',
-        //         '<a class="remove" href="javascript:void(0)" title="Remove">',
-        //         '<i class="fa fa-trash"></i>',
-        //         '</a>'
-        //     ].join('')
-        // };
+        
         const operateFormatter = [
             '<a class="like" href="javascript:void(0)" title="Like">',
             'Like',
@@ -213,36 +188,9 @@ button.addEventListener('click', async (event) => {
         tr.append(th);
         thead.append(tr);
         table.append(thead);
-        // body
-        // const tbody = document.createElement('tbody');
-        // for (i of json){
-        //     const tr2 = document.createElement('tr');
-        //     for (j of headT){
-        //         const td = document.createElement('td');
-        //         td.textContent = i[j];
-        //         tr2.append(td);
-        //     }
-        //     tbody.append(tr2);
-        // }
-        // table.append(tbody);
-        // document.body.append(table);
+        
         divtable.appendChild(table);
-
-        // const p = document.createElement('p');
-        // p.textContent = 'HA';
-        // document.body.append(p);
-        // console.log('p');
-        // let data = [{
-        //     chn_name: "ABC",
-        //     course_code: 123
-        // },{
-        //     "chn_name": "CDE",
-        //     "course_code": 456
-        // }];
         $(function () {
-            // $('#dataTable').bootstrapTable({
-                
-            // });
             $('#dataTable').bootstrapTable({
                 // columns: columns,
                 data: json,
