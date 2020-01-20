@@ -9,14 +9,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+    <!-- Select -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Hello, world!</title>
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
-    <form>
+    <h1>Schedule of Courses!</h1>
+    <div><a href="#">Enter</a> | <a href="#dataTable">Table</a></div>
+    <form id="formData">
         <div class="row">
             <div class="form-group col">
                 <label for="acadmYear">Acadm Year</label>
@@ -31,26 +33,27 @@
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="engTeach">
             <label class="form-check-label" for="engTeach">
-                Coures taught in english: 
+                Coures taught in english
             </label>
         </div>
         <div class="row">
             <div class="form-group col">
                 <label for="deptCode">Dept. Select:</label>
                 <select class="form-control select2 " data-show-subtext="true" data-live-search="true" id="deptCode">
-                    
+                    <!-- <option></option> -->
                 </select>
             </div>
             <div class="form-group col">
                 <label for="classCode">Class Select:</label>
                 <select class="form-control form-control-sm" id="classCode">
-                    <option>1</option>
+                    <!-- <option></option> -->
+                    <!-- <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
                     <option>7</option>
                     <option>8</option>
-                    <option>9</option>
+                    <option>9</option> -->
                 </select>
             </div>
         </div>
@@ -77,10 +80,14 @@
         
         <button type="submit" class="btn btn-primary mb-2" id="confirm">Confirm identity</button>
     </form>
+    <div id="divtable"></div>
+    <!-- <a class="like" href="javascript:void(0)" title="Like">ABC</a> <a class="remove"
+        href="javascript:void(0)" title="Remove"><i class="fa fa-trash"></i></a> -->
 
-
+    <!-- Select -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    
     <script src="script.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -93,6 +100,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+    
 </body>
 
 </html>

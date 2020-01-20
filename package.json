@@ -9,6 +9,7 @@
   "author": "Aaron",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "bootstrap-select": "^1.13.12",
     "cheerio": "^1.0.0-rc.3",
     "cors": "^2.8.5",
