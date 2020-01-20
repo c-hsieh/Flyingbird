@@ -1,12 +1,13 @@
 const express = require('express');
 const fetch = require('node-fetch');
-const cors = require('cors')
+const cors = require('cors');
+require('dotenv').config();
 // const Datastore = require('nedb');
 
 const app = express(cors());
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Starting sever at ${port}`)
+app.listen(port, () => { 
+    console.log(`Starting sever at ${port}`) 
 });
 
 app.use(express.static('public')); //show public dir
@@ -23,4 +24,5 @@ app.post('/post', async (request, response) => {
     fetch_response.type = 'basic'
     const rr = await fetch_response.json();
     response.json(rr['List']);
+    
 });
